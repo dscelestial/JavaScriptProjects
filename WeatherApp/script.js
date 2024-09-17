@@ -1,16 +1,15 @@
 const container = document.querySelector('.container');
-const search = document.querySelector('.search-box button');
+const searchButton = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
+const searchInput = document.querySelector('.search-box input');
 
-search.addEventListener('click', () => {
-
+function fetchWeather() {
     const APIKey = '20ba1764f1d8ee88c5e9b39c4f2142d2';
-    const city = document.querySelector('.search-box input').value;
+    const city = searchInput.value;
 
-    if (city === '')
-        return;
+    if (city === '') return;
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
@@ -70,10 +69,12 @@ search.addEventListener('click', () => {
             weatherDetails.classList.add('fadeIn');
             container.style.height = '590px';
 
-
         });
+    }
 
-
+    searchButton.addEventListener('click', fetchWeather);
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            fetchWeather(); 
+        }
 });
-
-
