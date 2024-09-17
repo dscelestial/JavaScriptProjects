@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
@@ -15,25 +14,25 @@
 
 <body>
 
-    <main class="container">
-        <div class="searchBox">
+    <div class="container">
+        <div class="search-box">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Enter a location">
+            <input type="text" placeholder="Enter your location">
             <button class="fa-solid fa-magnifying-glass"></button>
         </div>
 
-        <div class="notFound">
-            <img src="images/error.png" alt="Error">
-            <p>Invalid Location!</p>
+        <div class="not-found">
+            <img src="images/error.png">
+            <p>Oops! Invalid location :/</p>
         </div>
 
-        <div class="weatherBox">
-            <img src="" alt="">
+        <div class="weather-box">
+            <img src="">
             <p class="temperature"></p>
             <p class="description"></p>
         </div>
 
-        <div class="weatherDetails">
+        <div class="weather-details">
             <div class="humidity">
                 <i class="fa-solid fa-water"></i>
                 <div class="text">
@@ -41,8 +40,7 @@
                     <p>Humidity</p>
                 </div>
             </div>
-
-            <div class="wind"></div>
+            <div class="wind">
                 <i class="fa-solid fa-wind"></i>
                 <div class="text">
                     <span></span>
@@ -50,13 +48,10 @@
                 </div>
             </div>
         </div>
-    </main>
 
-    <h1>WEATHER APP</h1>
-    <input type="text" id="location">
-    <button id="getWeather" aria-placeholder="Location/City">Get Weather</button>
+    </div>
 
-    <script src="https://kit.fontawesome.com/83b4af0d16.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
